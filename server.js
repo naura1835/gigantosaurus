@@ -49,6 +49,10 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
 
+app.get("/api", (req, res) => {
+  res.json(characters);
+});
+
 app.get("/api/:character", (req, res) => {
   const dinosaur = req.params.character.toLowerCase();
   if (characters[dinosaur]) res.json(characters[dinosaur]);

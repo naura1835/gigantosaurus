@@ -52,6 +52,6 @@ app.get("/api/:character", (req, res) => {
   else res.json(characters["ayati"]);
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`your port is running on ${PORT}`);
 });

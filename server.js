@@ -10,9 +10,6 @@ let db;
 const app = express();
 
 app.use(cors());
-//the 2 lines below allow us to peek into our request object and get all the stuff we need out of it
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
 
 MongoClient.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
